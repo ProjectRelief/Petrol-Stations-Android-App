@@ -1,12 +1,18 @@
 package com.androiddev.petrolstations;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,11 @@ public class PetrolPumpsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView recview;
+    PetrolPumpsAdapter PetrolAdapter;
+    LinearLayoutManager nestedLayoutManager;
+    FirebaseRecyclerOptions<PumpsModel> options;
 
     public PetrolPumpsFragment() {
         // Required empty public constructor
@@ -59,6 +70,33 @@ public class PetrolPumpsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_petrol_pumps, container, false);
+        View view = inflater.inflate(R.layout.fragment_petrol_pumps, container, false);
+
+
+        recview = (RecyclerView)view.findViewById(R.id.rec_view);
+        nestedLayoutManager = new LinearLayoutManager(getActivity());
+        nestedLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        recview.setLayoutManager(nestedLayoutManager);
+        options =
+                new FirebaseRecyclerOptions.Builder<PumpsModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("PetrolBunks"), PumpsModel.class)
+                        .build();
+        PetrolAdapter = new PetrolPumpsAdapter(options);
+        recview.setAdapter(PetrolAdapter);
+        PetrolAdapter.notifyDataSetChanged();
+        return view;
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        PetrolAdapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        PetrolAdapter.stopListening();
+    }
+
 }

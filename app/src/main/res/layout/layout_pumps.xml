@@ -5,6 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:padding="5dp"
+    app:cardElevation="15dp"
+    android:id="@+id/card"
     app:cardCornerRadius="5dp">
 
 
@@ -35,23 +37,25 @@
                     android:id="@+id/pumpName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4.2"
+                    android:layout_weight="3"
                     android:ellipsize="end"
                     android:text="Petrol Pump Name"
                     android:textColor="#000000"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"/>
 
                 <TextView
+                    android:id="@+id/petrolcost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
+                    android:layout_weight="2"
                     android:ellipsize="end"
-                    android:text="Rs.75.5"
+                    android:text="Petrol - Rs.75.5"
                     android:textColor="#000000"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
-
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"/>
             </LinearLayout>
 
 
@@ -59,10 +63,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textStyle="bold"
+                        android:layout_weight="3"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/dieselcost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:ellipsize="end"
+                        android:text="Diesel - Rs.75.5"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -215,136 +245,8 @@
 
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.5"
-                        android:gravity="center"
-                        android:text="Indhan Ratings"
-                        android:textSize="8sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/sanityTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Sanity"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                android:textColor="#000000"/>
-                            <TextView
-                                android:id="@+id/sanityRatingTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="4"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/behaviourTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Behaviour"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                android:textColor="#000000"/>
-                            <TextView
-                                android:id="@+id/behaviorRatingTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="4"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/foodTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Food"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                android:textColor="#000000"/>
-                            <TextView
-                                android:id="@+id/restaurantRatingTextView"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="4"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
 
                 </LinearLayout>
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -411,9 +313,4 @@
                 android:text="Click here to navigate."
                 android:textSize="8sp" />
 
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
