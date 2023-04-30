@@ -5,12 +5,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,6 +28,7 @@ public class MapsFragment extends Fragment {
     private GoogleMap mMap;
     double lat,lng;
     Button btnDirec;
+    Toolbar toolbar;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
         @Override

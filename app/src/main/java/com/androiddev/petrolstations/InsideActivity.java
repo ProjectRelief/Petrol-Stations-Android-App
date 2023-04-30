@@ -46,7 +46,7 @@ public class InsideActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.frame,new HomeFragment(),"HomeFragment")
                 .commit();
-        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setTitle("Home");
         toolbar.setBackgroundColor(Color.parseColor("#ff0000"));
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(
@@ -80,7 +80,7 @@ public class InsideActivity extends AppCompatActivity {
                             .replace(R.id.frame,new HomeFragment(),"HomeFragment")
                             .addToBackStack("HomeFragment")
                             .commit();
-                    getSupportActionBar().setTitle(null);
+                    getSupportActionBar().setTitle("Home");
                     toolbar.setBackgroundColor(Color.parseColor("#ff0000"));
                     actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
                     drawerLayout.closeDrawers();
@@ -91,7 +91,7 @@ public class InsideActivity extends AppCompatActivity {
                             .replace(R.id.frame,new PetrolPumpsFragment(),"PetrolFragment")
                             .addToBackStack("PetrolFragment")
                             .commit();
-                    getSupportActionBar().setTitle(null);
+                    getSupportActionBar().setTitle("Petrol Bunks");
                     toolbar.setBackgroundColor(Color.parseColor("#ff0000"));
                     actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
                     drawerLayout.closeDrawers();
@@ -102,7 +102,7 @@ public class InsideActivity extends AppCompatActivity {
                             .replace(R.id.frame,new SpeedometerFragment(),"SpeedometerFragment")
                             .addToBackStack("SpeedometerFragment")
                             .commit();
-                    getSupportActionBar().setTitle(null);
+                    getSupportActionBar().setTitle("Speedometer");
                     toolbar.setBackgroundColor(Color.parseColor("#ff0000"));
                     actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
                     drawerLayout.closeDrawers();
