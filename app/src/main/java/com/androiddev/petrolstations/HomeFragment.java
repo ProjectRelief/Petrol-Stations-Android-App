@@ -1,8 +1,11 @@
 package com.androiddev.petrolstations;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+
+    CardView card1,card2,card3;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +64,30 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        card1 = view.findViewById(R.id.card1);
+        card2 = view.findViewById(R.id.card2);
+        card3 = view.findViewById(R.id.card3);
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.frame,new PetrolPumpsFragment(),"PetrolFragment")
+                        .addToBackStack("PetrolFragment")
+                        .commit();
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.frame,new SpeedometerFragment(),"SpeedometerFragment")
+                        .addToBackStack("SpeedometerFragment")
+                        .commit();
+            }
+        });
+
+        return view;
     }
 }
