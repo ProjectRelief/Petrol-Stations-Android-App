@@ -29,4 +29,9 @@
     <string name="close_drawer">Close drawer</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="go">Directions</string>
+    <string name="title_activity_bottam_nav">bottam_nav</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main2">MainActivity2</string>
 </resources>
