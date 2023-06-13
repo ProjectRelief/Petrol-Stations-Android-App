@@ -31,6 +31,9 @@ public class bottom_navActivity extends AppCompatActivity {
                 case R.id.service:
                     replaceFragment(new PetrolPumpsFragment());
                     break;
+                case R.id.speedometer:
+                    replaceFragment(new PetrolPumpsFragment());
+                    break;
                 case R.id.notifiation:
                     replaceFragment(new notificationFragment());
                     break;
