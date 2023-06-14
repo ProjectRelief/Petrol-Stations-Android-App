@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.androiddev.petrolstations.databinding.ActivityBottomNavBinding;
-import com.androiddev.petrolstations.databinding.ActivityMainBinding;
 
 public class bottom_navActivity extends AppCompatActivity {
 
@@ -31,12 +30,10 @@ public class bottom_navActivity extends AppCompatActivity {
                 case R.id.service:
                     replaceFragment(new PetrolPumpsFragment());
                     break;
-                case R.id.speedometer:
+                case R.id.dashboard:
                     replaceFragment(new PetrolPumpsFragment());
                     break;
-                case R.id.notifiation:
-                    replaceFragment(new notificationFragment());
-                    break;
+
                 case R.id.profile:
                     replaceFragment(new profileFragment());
                     break;

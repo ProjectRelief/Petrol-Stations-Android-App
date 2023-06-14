@@ -51,11 +51,8 @@ public class InsideActivity extends AppCompatActivity {
                     case R.id.service:
                         replaceFragment(new PetrolPumpsFragment());
                         break;
-                    case R.id.speedometer:
+                    case R.id.dashboard:
                         replaceFragment(new PetrolPumpsFragment());
-                        break;
-                    case R.id.notifiation:
-                        replaceFragment(new notificationFragment());
                         break;
                     case R.id.profile:
                         replaceFragment(new profileFragment());
