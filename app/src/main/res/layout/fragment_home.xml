@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".HomeFragment">
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="139dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="138dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,6 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
@@ -65,113 +64,119 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="#D6DFED"
-            app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#D6DFED"
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/ic_baseline_ev_station_24" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/card1_ev" />
+            </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="EV Station"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <!-- Add other views under Card 1 -->
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card3"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="#D6DFED"
-            app:cardCornerRadius="15dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="EV Station"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Add other views under Card 1 -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#D6DFED"
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/ic_baseline_speed_24" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/card3_speedo" />
+            </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="Speedometer"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <!-- Add other views under Card 2 -->
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="#D6DFED"
-            app:cardCornerRadius="15dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Speedometer"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Add other views under Card 2 -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#D6DFED"
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="100dp"
-                    android:layout_height="52dp"
-                    app:srcCompat="@drawable/ic_baseline_local_gas_station_24" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/card2_petrol" />
+            </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="Petrol "
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Petrol "
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-                <!-- Add other views under Card 3 -->
+            <!-- Add other views under Card 3 -->
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView
@@ -179,7 +184,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="307dp"
         android:fontFamily="sans-serif-black"
         android:text="Version 1.0"
@@ -187,11 +192,12 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintHorizontal_bias="0.361"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"
